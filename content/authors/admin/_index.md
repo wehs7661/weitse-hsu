@@ -19,7 +19,6 @@ bio: Ph.D. student passionate about exploring biophysical phenomenta with molecu
 # Interests to show in About widget
 interests:
   - Molecular dynamics 
-  - Advanced sampling methods
   - Computational biophysics
   - Computer-aided drug design
   - Machine learning/deep learning

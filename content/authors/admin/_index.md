@@ -10,7 +10,7 @@ role: Ph.D. Researcher
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Department of Chemical and Biological Engineering, University of Colorado Boulder
+  - name: Department of Chemical Engineering, University of Colorado Boulder
     url: https://www.colorado.edu/
 
 # Short bio (displayed in user profile at end of posts)
@@ -68,6 +68,6 @@ email: 'wehs7661@colorado.edu'
 highlight_name: true
 ---
 
-Hi! I'm Wei-Tse Hsu, a Ph.D student in the [Shirts Research Group](https://www.colorado.edu/lab/shirtsgroup/) at CU Boulder. I'm passionate about unriddling biophysical phenomena from their relevant conformational ensembles obtained from molecular dynamics. I have abundant experience in various advanced sampling methods, including metadynamics, replica exchange, expanded ensemble, umbrella sampling and their most popular variations. I'm also working on SCALE-MS, an extensible framework for supporting adaptive and asynchronous executions of simulation ensembles. In parallel to my research, I love transferring knowledge in any form that makes difficult things easier and inspiring. Being a professor is my career goal. In my free time, I enjoy long-distance running and playing the guitar. 
+Hi! I'm Wei-Tse Hsu, a Ph.D researcher in the [Shirts Research Group](https://www.colorado.edu/lab/shirtsgroup/) at CU Boulder. I'm passionate about unriddling biophysical phenomena from their relevant conformational ensembles obtained from molecular dynamics. I have abundant experience in various advanced sampling methods (e.g metadynamics, replica exchange, expanded ensemble, and umbrella sampling) I'm also working on SCALE-MS, a framework for supporting adaptive and asynchronous executions of simulation ensembles. I love transferring knowledge in any form that makes difficult things easier and inspiring. Being a professor is my career goal. In my free time, I enjoy long-distance running and playing the guitar. 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}curriculum vitae{{< /staticref >}}.

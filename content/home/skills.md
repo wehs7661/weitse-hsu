@@ -27,8 +27,8 @@ feature:
     name: Molecular simulation
 
   - description: VMD, PyMol
-    icon: dna
-    icon_pack: fas
+    icon: protein
+    icon_pack: custom
     name: Molecular visualization
   
   

@@ -21,7 +21,7 @@ interests:
   - Molecular dynamics 
   - Computational biophysics
   - Computer-aided drug design
-  - Machine learning/deep learning
+  - Deep learning
 
 # Education to show in About widget
 education:

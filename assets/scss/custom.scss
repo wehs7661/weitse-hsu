@@ -25,8 +25,14 @@ Alnd here are the lists of sections  whose settings are not but can be modified 
   - Widgets (common)
   - Hero widget (https://wowchemy.com/docs/widget/hero/)
   - Slider widget (https://wowchemy.com/docs/widget/slider/)
-  - Featurette Widget (https://wowchemy.com/docs/widget/featurette/)
-  - Talks 
+  - Featurette widget (https://wowchemy.com/docs/widget/featurette/)
+  - Talks widget
+  - Accomplishments widget
+  - People widget
+  - Contact widget
+- `_integrations.scss`
+- `academic.scss` (just for importing different scss files)
+- `_docs.scss`
 
 Table of Content (TOC) of this file:
 - Section 1: Academic's Core (from ref 3, _root.scss)
@@ -176,6 +182,22 @@ footer p {
   border-radius: 0 6px 6px 0;
 }
 
+.btn-primary {
+  border-color: #6ec6ff !important;
+  background: #6ec6ff !important;
+}
+
+.btn-toolbar .btn.btn-primary:hover,
+.btn-toolbar .btn.btn-primary:focus {
+  background-color: #82deeb !important;
+}
+
+.btn-toolbar .btn.btn-primary:active,
+.btn-toolbar .btn.btn-primary.active {
+  background-color: #0095eb !important;
+}
+
+
 /*************************************************************
  *  Section 4: Dark themed components (from ref 3, _dark.scss)
  *************************************************************/
@@ -203,10 +225,6 @@ footer p {
 
 .dark ul.ul-edu li .description p.institution {
   color: rgba(255, 255, 255, 0.6);   // instutitue name under Education
-}
-
-.dark .pub-icon {
-  color: rgba(255, 255, 255, 0.54);  // the icon in the publication section, original value: (255, 255, 255)
 }
 
 .dark .talk-metadata {
@@ -432,6 +450,8 @@ ul.share li:hover i {
  *  Section 10: Navigation bar (from ref 4, or ref 3, _nav.scss)
  ***************************************************************/
 
+// There are also a lot of relevant settings in ref 1 available.
+
 .navbar {
   height: 70px;
   background: $sta-menu-primary;
@@ -567,7 +587,99 @@ ul.ul-edu {
   margin-bottom: 0.5rem;
 }
 
-// Start from https://github.com/niksirbi/MyWebsite/blob/master/themes/hugo-academic/assets/sass/academic/_widgets.scss
-// Lin 396, projects!
+/**********************************************************
+ *  Section 14: Projects widget (from ref 3, _widgets.scss)
+ **********************************************************/
 
+// There are a lot of settings available in _wdiges.scss but most of them didn't seem to take effects.
 
+.projects-container {
+  // the settings for the whole container
+  display: block;
+  position: relative;
+  // margin-top: 0rem;
+  overflow: hidden;
+}
+
+/**************************************************
+ *  Section 15: Listings (from ref 3, listings.scss
+ **************************************************/
+
+.dark .pub-icon {
+  font-size: 0.81em;
+  padding-right: 6px;
+  color: rgba(255, 255, 255, 0.54);  // the icon in the publication section, original value: (255, 255, 255)
+}
+
+.media.stream-item {
+  margin-bottom: 0rem;  // original value: 2rem (bottom margin of Recent Posts)
+}
+
+.media.stream-item .article-title,
+.card-simple .article-title {
+  font-size: 1.2rem;
+}
+
+.media.stream-item .article-style,
+.card-simple .article-style {
+  // Abstract of Projects or Recent Posts
+  margin-top: 2px;
+  font-size: 0.8rem;
+}
+
+.media.stream-item .stream-meta {
+  // top margin of the links from the metatext in Research Projects and Recent Posts
+  margin-top: 12px;
+}
+
+.media.stream-item img {
+  max-width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+/***********************************************
+ *  Section 17: Search (from ref 3, _search.scss
+ ***********************************************/
+
+ .dark .search-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;  /* Navbar height. */
+  background-color: $sta-dark-background;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.search-header h1 {
+  margin: 0;
+  line-height: 1;
+}
+
+#search-box {
+  position: relative; /* Required for search icon positioning. */
+  margin-bottom: 0.5rem; // below the search box
+}
+
+.dark .search-hit {
+  margin-bottom: 1.5rem;
+}
+
+.search-hit-type {
+  margin-bottom: 0 !important; /* Override .article-metadata margin. */
+  text-transform: capitalize;
+}
+
+.search-hit-description {
+  font-size: 0.7rem;
+}
+
+/*******************************************************************
+ *  Section 18: Additional settings modified from ref 1, custom.scss
+ *******************************************************************/
+
+ .home-section .project-tags {
+  font-size: 5rem;
+  color: #9c9c9c;
+  margin-bottom: 20rem;
+}

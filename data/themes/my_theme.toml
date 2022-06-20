@@ -24,7 +24,7 @@ name = "Minimal"
   # Menu
   menu_primary = "#fff"
   menu_text = "rgb(39,41,53)"
-  menu_text_active = "rgb(39,41,53)"
+  menu_text_active = "4dcba6"
   menu_title = "rgb(39,41,53)"
 
   # Home sections

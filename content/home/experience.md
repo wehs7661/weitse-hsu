@@ -10,7 +10,7 @@ headless: true
 weight: 40
 
 title: Research Experience
-subtitle: See [Project]() for more details. 
+subtitle: See [Research Projects]() for more details. 
 
 # Date format for experience
 #   Refer to https://wowchemy.com/docs/customization/#date-format
@@ -32,9 +32,9 @@ experience:
     description: |2-
         - **Advisor: Prof. Michael R. Shirts**
         - Identified signatures of proteolytic stability and dimerization propensity in O-glycosylated insulin using molecular dynamics.
-        - Worked on alchemical metadynamics, a method that enhances alchemical and configurational sampling in free energy calculations.
+        - Worked on alchemical metadynamics, a method that enhances alchemical/configurational sampling in free energy calculations.
         - Worked on SCALE-MS, an extensible framework to support adaptive and asynchronous execution of simulation ensembles.
-        - Maintained `physical_validation`, a Python package aimed at testing results from molecular dynamics for their physical validity.
+        - Maintained `physical_validation`, a Python package aimed at testing the physical validity of results from molecular dynamics.
 
   - title: Undergraduate researcher/research assistant in Biomolecular Engineering Laboratory
     company: Department of chemiecal Engineering, National Taiwan University

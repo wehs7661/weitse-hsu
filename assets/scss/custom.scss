@@ -8,20 +8,186 @@ Some useful references:
 Note that a lot of sections in the file are the same as the default used by Wowchemy academuc 
 theme. Variables with .dark as the prefix will replace the settings in the corresponding 
 variables without .dark (e.g. .dark .article-metadata v.s. .article-metadata)
+
+The parameters here are mainly modified from ref 3, which include the following 
+scss files: _card.scss, _content.scss, _dark.scss, _docs.scss, _integrations.scss,
+_listings.scss, _nav.scss, _root.scss, _search.scss, _widget.scss, and academic.scss
+
+Alnd here are the lists of sections  whose settings are not but can be modified in each file in ref 3.
+- `_root.scss`
+  - Modals
+  - Gallery
+  - Pager 
+  - Tags/Labels
+  - Tables
+  - Article Alerts (Shortcodde) and Asides (Mmark)
+- `_widges.scss`
+  - Widgets (common)
+  - Hero widget (https://wowchemy.com/docs/widget/hero/)
+  - Slider widget (https://wowchemy.com/docs/widget/slider/)
+  - Featurette Widget (https://wowchemy.com/docs/widget/featurette/)
+  - Talks 
+
+Table of Content (TOC) of this file:
+- Section 1: Academic's Core (from ref 3, _root.scss)
+- Section 2. Footer (from ref 3, _root.scss)
+- Section 3: Button size override/toolbar buttons (from ref 3, _root.scss)
+- Section 4: Dark themed components (from ref 3, _dark.scss)
+- Section 5: Card compoenents (from ref 3, _card.scss)
+- Section 6: Post content (from ref 3, _content.scss)
+- Section 7: Publications (from ref 3, _content.scss)
+- Section 8: Author profile card (from ref 3, _content.scss)
+- Section 9: Sharing buttons on the publication page (from ref 3, _content.scss
+- Section 10: Navigation bar (from ref 4, or ref 3, _nav.scss)
+
 *********************************************************************************************/
 
+/******************************************************
+ *  Section 1: Academic's Core (from ref 3, _root.scss)
+ ******************************************************/
+html {
+// for the whole page
+  font-family: $sta-font-body, sans-serif;
+  font-size: #{$sta-font-size}px;
+  color: rgba(0,0,0,0.8);
+  line-height: 1.5;  // original value: 1.65
+}
+
+body {
+  font-family: inherit;
+  font-size: 1rem;   // for the about section
+  line-height: inherit;
+  color: inherit;
+  background-color: $sta-background;
+  margin-top: 60px; /* Offset of the body text from the navbar. */
+  padding-top: 0;
+  counter-reset: captions;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;  // between the bio and "Download CV"
+}
+
+/* Lists */
+ul, ol, dl {
+  color: #fff;   // for all lists
+  margin-top: 0;
+  margin-bottom: 0rem;  // for the cards in Research Experience
+}
+
+/* Headings */
+/* There are also settings for h2 to h6 in _root.scss but I'm not sure which headings they correspond to ... */
+h1 {
+  font-size: 2.25rem;  // About Me, Research Experience, ...
+}
+
+/* Images/Videos */
+img,
+video {
+  // For all images and videos
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+figcaption {
+  display: block;
+  margin-top: 0.75em;
+  line-height: 1.25;
+  font-size: 1rem;
+  margin-bottom: 1.65rem;
+  font-family: $sta-font-heading, sans-serif;
+}
+
+/* Quotes */
+/* More settings can be found in _root.scss */
+blockquote {
+  // Block quotes in markdown files starting with > 
+  padding: 0.5rem 1rem;  // top/botoom and left padding
+  margin: 0.8rem 0;      // Margin between the block quote and the previous line
+  color: #7a7a7a;
+  border-left: .25rem solid #e5e5e5;   // The width of the border |
+}
+
+/*********************************************
+ *  Section 2. Footer (from ref 3, _root.scss)
+ *********************************************/
+
+footer {
+  margin: 4rem 0 0;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.dark site-footer,
+.dark footer a#back_to_top i,
+.dark .docs .body-footer {
+  color: rgba(255,255,255,0.54);
+}
+
+/***************************************************************************
+ *  Section 3: Button size override/toolbar buttons (from ref 3, _root.scss)
+ ***************************************************************************/
+
+ // For the button in Research Projects
+
+.dark .btn {
+  padding: .5rem;
+  font-size: .8rem;
+  line-height: .5;
+  border-radius: .3rem;
+}
+
+.btn-links .btn {
+  padding: 5px .5rem 5px .5rem;
+  line-height: 1;
+}
+
+.btn.btn-sm {
+  padding: 5px .4rem 5px .4rem;
+  font-size: .6rem;
+  border-radius: .2rem;
+}
+
+.btn-toolbar .btn {
+  font-size: 0.9rem;
+  padding: 10px 14px 9px;
+  border: none;
+}
+
+.btn-toolbar .btn:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.btn-toolbar .btn:last-child {
+  border-radius: 0 6px 6px 0;
+}
 
 /*************************************************************
- *  Section 1: Dark themed components (from ref 3, _dark.scss)
+ *  Section 4: Dark themed components (from ref 3, _dark.scss)
  *************************************************************/
 
+/* Check ref 3, _root.scss Headings section for more relevant settings */
  .dark h1,
  .dark h2,
  .dark h3,
  .dark h4,
  .dark h5,
  .dark h6 {
-   color: #EAF38B;  // the color of the headings
+   color: #EAF38B;  // e.g. About Me
  }
 
 .dark pre,
@@ -30,16 +196,9 @@ variables without .dark (e.g. .dark .article-metadata v.s. .article-metadata)
   // background-color: rgb(68, 71, 90);
 }
 
-.dark .article-title h6 {
-  color: #fff;
-}
-
-.dark .portrait-title h2 {   // Wei-Tse Hsu
-  color: #fff;
-}
-
-.dark .portrait-title h3 {   // Ph.D. Researcher
-  color: #fff;
+.dark .article-title a {
+  // the article title in Recent Posts
+  color: #fff;  
 }
 
 .dark ul.ul-edu li .description p.institution {
@@ -54,39 +213,41 @@ variables without .dark (e.g. .dark .article-metadata v.s. .article-metadata)
   color: rgba(255, 255, 255, 0.54);
 }
 
-.dark .card {
-  background: #343a40;  // e.g the card backgrounds in Research Experience
-  border-bottom: solid 0px transparent;
-  // font-size: ;  // doesn't seem to take effect ...
-  // font-weight: bold;
-}
-
 .dark select {
   background: rgb(40, 42, 54);
   color: rgb(248, 248, 242);
 }
 
-/**************************************************
- *  Section 2: Navigation bar (from ref 4)
- **************************************************/
+/*******************************************************
+ *  Section 5: Card compoenents (from ref 3, _card.scss)
+ *******************************************************/
 
-.navbar {
-  height: 70px;
-  background: $sta-menu-primary;
-  box-shadow: none;
-  font-size: 18px;
-  font-weight: 900 !important;
-  // position: fixed;
-  // top: 0;
-  // right: 0;
-  // left: 50;
-  // z-index: 1030;
-  // padding: 0 1rem;
+.dark .card-simple {
+  // the cards in Featured Publications
+  background: rgb(40, 42, 54);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgb(68, 71, 90);
 }
 
-/***********************************************************
- *  Section 3: Post content (from ref 3, _content.scss)
- ***********************************************************/
+.dark .card {
+  // the cards in Research Experience
+  background: #343a40;  
+  border-bottom: solid 0px transparent;
+  line-height: 1.75;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  // padding: 0rem 0rem 0rem;  // interior padding
+  // font-size: ;  // doesn't seem to take effect ...
+  // font-weight: bold;
+}
+
+.dark .card .card-text {
+  // the cards in Research Experience
+  padding: 0.75rem 1rem 0rem;
+}
+
+/******************************************************
+ *  Section 6: Post content (from ref 3, _content.scss)
+ ******************************************************/
 
 .article-container {
   max-width: 900px;
@@ -182,9 +343,9 @@ article .article-metadata {
   margin-bottom: 2rem;
 }
 
-/****************************************************
- * Secion 4: Publications (from ref 3, _content.scss)
- ****************************************************/
+/*****************************************************
+ * Section 7: Publications (from ref 3, _content.scss)
+ *****************************************************/
 
  .li-cite-author {
   // on the home page
@@ -201,7 +362,7 @@ article .article-metadata {
 }
 
 /*************************************************************
- *  Section 5: Author profile card (from ref 3, _content.scss)
+ *  Section 8: Author profile card (from ref 3, _content.scss)
  *************************************************************/
 
  .author-card {
@@ -224,7 +385,7 @@ article .article-metadata {
 }
 
 /********************************************************************************
- *  Section 6: Sharing buttons on the publication page (from ref 3, _content.scss
+ *  Section 9: Sharing buttons on the publication page (from ref 3, _content.scss
  ********************************************************************************/
 
  .share-box {
@@ -266,4 +427,147 @@ ul.share li a {
 ul.share li:hover i {
   transform: scale(1.4)
 }
+
+/***************************************************************
+ *  Section 10: Navigation bar (from ref 4, or ref 3, _nav.scss)
+ ***************************************************************/
+
+.navbar {
+  height: 70px;
+  background: $sta-menu-primary;
+  box-shadow: none;
+  font-size: 18px;
+  font-weight: 900 !important;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 50;
+  // z-index: 1030;
+  // padding: 0 1rem;
+}
+
+/******************************************************************************
+ *  Section 11: Page Builder: sections and weidgets (from ref 3, _widgets.scss)
+ ******************************************************************************/
+
+.dark .home-section {
+  //background-color: $sta-home-section-odd;
+  padding: 60px 0 60px 0;  // this will override margin-top in "body" in Section 1
+  animation: intro 0.3s both;
+  animation-delay: 0.15s;
+}
+
+.dark .home-section {
+  background-color: $sta-dark-home-section-odd;
+}
+
+.dark .home-section:nth-of-type(even) {
+  background-color: $sta-dark-home-section-even;
+}
+
+.section-heading p {
+  font-weight: 400;
+  font-size: 1.1rem; // subtitle (e.g. "See Research Projects for more details")
+  color: #b2b2b2;
+}
+
+/*******************************************************
+ *  Section 12: About widget (from ref 3, _widgets.scss)
+ *******************************************************/
+
+ #profile {
+  text-align: center;
+  padding: 30px 10px;   // Top padding and left/right paddings
+  position: relative;
+}
+
+.portrait {
+  // Doesn't seem to take effects
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dark .portrait-title h2 {
+  // Wei-Tse Hsu
+  font-size: 1.75em;
+  font-weight: 300;
+  color: #fff;
+  margin: 20px 0 10px 0;
+}
+
+.dark .portrait-title h3 {
+  // Ph.D. Researcher
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0px 0 10px 0;
+}
+
+#profile .network-icon {
+  margin-top: 30px;
+}
+
+.network-icon li {
+  margin-right: 15px;
+}
+
+.network-icon li:hover {
+  transform: scale(1.2)
+}
+
+.big-icon {
+  // icon size
+  font-size: 2rem;
+}
+
+ul.ul-interests li {
+  // Only for the list (not for the title)
+  font-size: 0.9rem;
+}
+
+ul.ul-edu {
+  font-size: 1rem;  // Only for the icon
+  list-style: none;
+  color: #fff;    // Only for the list
+}
+
+/*********************************************************
+ * Section 13: Experience widget (from ref 3, _widget.scss
+ *********************************************************/
+
+ .exp-title {
+  text-transform: none !important;
+}
+
+.exp-company {
+  font-weight: normal !important;
+  text-transform: none !important;
+}
+
+.exp-meta {
+  font-size: .8rem;  // date and location
+}
+
+.dark .experience .card-text,
+.dark .experience .card-text p {
+  color:rgb(248, 248, 242) !important;
+  font-size: 0.8rem !important;
+}
+
+.dark .card .card-text ul {
+  margin-top: 0rem;    // margin from the text to metadata
+  margin-bottom: 0rem;
+}
+
+.dark .card {
+  // margins between cards
+  margin-bottom: 0.5rem;
+}
+
+// Start from https://github.com/niksirbi/MyWebsite/blob/master/themes/hugo-academic/assets/sass/academic/_widgets.scss
+// Lin 396, projects!
+
 

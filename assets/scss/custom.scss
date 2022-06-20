@@ -1,0 +1,269 @@
+/********************************************************************************************
+Some useful references:
+- https://github.com/dbarneche/academic/blob/master/assets/scss/custom.scss
+- https://github.com/wowchemy/wowchemy-hugo-themes/tree/main/wowchemy/assets/scss/wowchemy
+- https://github.com/niksirbi/MyWebsite/tree/master/themes/hugo-academic/assets/sass/academic
+- https://isabella-b.com/blog/hugo-academic-customization/
+
+Note that a lot of sections in the file are the same as the default used by Wowchemy academuc 
+theme. Variables with .dark as the prefix will replace the settings in the corresponding 
+variables without .dark (e.g. .dark .article-metadata v.s. .article-metadata)
+*********************************************************************************************/
+
+
+/*************************************************************
+ *  Section 1: Dark themed components (from ref 3, _dark.scss)
+ *************************************************************/
+
+ .dark h1,
+ .dark h2,
+ .dark h3,
+ .dark h4,
+ .dark h5,
+ .dark h6 {
+   color: #EAF38B;  // the color of the headings
+ }
+
+.dark pre,
+.dark code {
+  color: #fff14d;  // the color of inline code 
+  // background-color: rgb(68, 71, 90);
+}
+
+.dark .article-title h6 {
+  color: #fff;
+}
+
+.dark .portrait-title h2 {   // Wei-Tse Hsu
+  color: #fff;
+}
+
+.dark .portrait-title h3 {   // Ph.D. Researcher
+  color: #fff;
+}
+
+.dark ul.ul-edu li .description p.institution {
+  color: rgba(255, 255, 255, 0.6);   // instutitue name under Education
+}
+
+.dark .pub-icon {
+  color: rgba(255, 255, 255, 0.54);  // the icon in the publication section, original value: (255, 255, 255)
+}
+
+.dark .talk-metadata {
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.dark .card {
+  background: #343a40;  // e.g the card backgrounds in Research Experience
+  border-bottom: solid 0px transparent;
+  // font-size: ;  // doesn't seem to take effect ...
+  // font-weight: bold;
+}
+
+.dark select {
+  background: rgb(40, 42, 54);
+  color: rgb(248, 248, 242);
+}
+
+/**************************************************
+ *  Section 2: Navigation bar (from ref 4)
+ **************************************************/
+
+.navbar {
+  height: 70px;
+  background: $sta-menu-primary;
+  box-shadow: none;
+  font-size: 18px;
+  font-weight: 900 !important;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 50;
+  // z-index: 1030;
+  // padding: 0 1rem;
+}
+
+/***********************************************************
+ *  Section 3: Post content (from ref 3, _content.scss)
+ ***********************************************************/
+
+.article-container {
+  max-width: 900px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto 0 auto;
+  font-size: 20px;
+}
+
+.page-subtitle {
+  font-size: 1.15rem;
+  color: rgba(0,0,0,.54);
+  margin-bottom: 1rem;
+}
+
+.dark .page-subtitle {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.54);
+  margin-bottom: 1rem;
+}
+
+.article-header-caption {
+  // Figure caption
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #fff;
+  font-size: .7em;
+  background: #000;
+  text-align: right;
+  z-index: 5;
+  opacity: 0.65;
+  border-radius: 5px 0 0 0;
+}
+
+.article-header-caption a {
+  color: #fff; 
+  text-decoration: none;
+}
+
+.article-metadata {
+  margin-bottom: 15px;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: rgba(0,0,0,0.54);
+}
+
+.article-metadata a {
+  color: rgba(0,0,0,.54);
+}
+
+.dark .article-metadata {
+  color: rgba(255,255,255,0.54);
+}
+
+.dark .article-metadata a {
+  color: rgba(255,255,255,0.54);
+}
+
+.dark .article-metadata a:hover {
+  color: $sta-primary;
+}
+
+.stream-meta.article-metadata {
+  margin-bottom: 5px;  // on the home page
+}
+
+article .article-metadata {
+  margin-bottom: 20px;
+  line-height: 30px; /* Match share bar line height. */
+}
+
+.dark .middot-divider {
+  // The middle dot as the divier in Research Experience (e.g. between date and location)
+  padding-right: .45em;
+  padding-left: .45em;
+  font-size: 15px;
+}
+
+.dark .article-style img,
+.dark .article-style video {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.dark .article-style figure {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/****************************************************
+ * Secion 4: Publications (from ref 3, _content.scss)
+ ****************************************************/
+
+ .li-cite-author {
+  // on the home page
+  font-size: 1em;
+  color: inherit;
+}
+
+.li-cite-author a {
+  color: inherit;
+}
+
+.dark .li-cite-author a {
+  color: rgb(248, 248, 242);
+}
+
+/*************************************************************
+ *  Section 5: Author profile card (from ref 3, _content.scss)
+ *************************************************************/
+
+ .author-card {
+  // On the publication page
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,.05);
+}
+
+.dark .author-card {
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.author-card .portrait {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/********************************************************************************
+ *  Section 6: Sharing buttons on the publication page (from ref 3, _content.scss
+ ********************************************************************************/
+
+ .share-box {
+  float: right;
+}
+
+ul.share li {
+  display: inline-flex;
+  margin-right: 5px;
+}
+
+ul.share li:last-of-type {
+  margin-right: 0;
+}
+
+ul.share li i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+  color: #fff;
+}
+
+.dark ul.share li i {
+  color: rgb(68, 71, 90);
+}
+
+ul.share li a {
+  background-color: #b5c6ce;
+  display: block;
+  border-radius: 50%;
+  text-decoration: none !important;
+  margin: 0;
+}
+
+ul.share li:hover i {
+  transform: scale(1.4)
+}
+

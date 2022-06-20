@@ -1,3 +1,4 @@
+# Other theme settings: https://github.com/wowchemy/wowchemy-hugo-themes/tree/main/wowchemy/data/themes
 # Theme metadata
 name = "Minimal"
 
@@ -12,12 +13,13 @@ name = "Minimal"
   menu_title = "#2b2b2b"
 
   # Home sections
+  background = ""
   home_section_odd = "rgb(255, 255, 255)"
   home_section_even = "rgb(247, 247, 247)"
 
 [dark]
   # Primary
-  primary = "#bbdefb"
+  primary = "#bbdefb"  # original: "#bbdefb", basically the link color (other choices: #44B7E7)
 
   # Menu
   menu_primary = "#fff"
@@ -26,9 +28,9 @@ name = "Minimal"
   menu_title = "rgb(39,41,53)"
 
   # Home sections
-  # background = ""
-  # home_section_odd = "rgb(255, 255, 255)"
-  # home_section_even = "rgb(247, 247, 247)"
+  # backgroun = ""
+  home_section_odd = "hsla(231, 15%, 18%, 1)"
+  home_section_even = "hsla(231, 15%, 16%, 1)"
 
-  link = "#bbdefb"
-  link_hover = "#bbdefb"
+  # link = "#bbdefb"
+  # link_hover = "#bbdefb"

@@ -14,7 +14,7 @@ organizations:
     url: https://www.colorado.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Ph.D. student passionate about exploring biophysical phenomenta with molecular dynamics
+bio: Ph.D. student passionate about exploring biophysical phenomena with molecular dynamics
 
 # Interests to show in About widget
 interests:

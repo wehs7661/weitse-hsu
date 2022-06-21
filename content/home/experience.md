@@ -10,7 +10,7 @@ headless: true
 weight: 40
 
 title: Research Experience
-subtitle: See [Research Projects]() for more details. 
+subtitle: See [Research Projects](#projects) for more details. 
 
 # Date format for experience
 #   Refer to https://wowchemy.com/docs/customization/#date-format

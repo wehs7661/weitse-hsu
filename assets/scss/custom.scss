@@ -203,14 +203,14 @@ footer p {
  *************************************************************/
 
 /* Check ref 3, _root.scss Headings section for more relevant settings */
- .dark h1,
- .dark h2,
- .dark h3,
- .dark h4,
- .dark h5,
- .dark h6 {
-   color: #EAF38B;  // e.g. About Me
- }
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #EAF38B;  // e.g. About Me
+}
 
 .dark pre,
 .dark code {
@@ -219,8 +219,8 @@ footer p {
 }
 
 .dark .article-title a {
-  // the article title in Recent Posts
-  color: #fff;  
+  // the article title in Recent Posts/Research posts
+  color:  #8adee9;  
 }
 
 .dark ul.ul-edu li .description p.institution {
@@ -501,6 +501,21 @@ ul.share li:hover i {
   position: relative;
 }
 
+.avatar {
+  width: 270px;
+  height: 270px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+// Use smaller avatar size in About widget on small devices.
+@include media-breakpoint-down(sm) {
+  .wg-about .avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .portrait {
   // Doesn't seem to take effects
   width: 200px;
@@ -585,6 +600,15 @@ ul.ul-edu {
 .dark .card {
   // margins between cards
   margin-bottom: 0.5rem;
+}
+
+.dark .experience .m-2 .border,
+.experience .col.border-right {
+  border-color: #6ec6ff !important;
+}
+
+.experience .m-2 .border.exp-fill {
+  background-color: #6ec6ff !important;
 }
 
 /**********************************************************

@@ -151,6 +151,7 @@ footer p {
  // For the button in Research Projects
 
 .dark .btn {
+  // All the buttons, including the filter button and the link buttons (e.g. publication, code, ...)
   padding: .5rem;
   font-size: .8rem;
   line-height: .5;
@@ -158,8 +159,11 @@ footer p {
 }
 
 .btn-links .btn {
+  // For the link buttons
+  color: #fff;
   padding: 5px .5rem 5px .5rem;
   line-height: 1;
+  border-color: #fff;
 }
 
 .btn.btn-sm {
@@ -220,7 +224,7 @@ footer p {
 
 .dark .article-title a {
   // the article title in Recent Posts/Research posts
-  color:  #8adee9;  
+  color:  #8adee9; 
 }
 
 .dark ul.ul-edu li .description p.institution {
@@ -241,7 +245,7 @@ footer p {
  *******************************************************/
 
 .dark .card-simple {
-  // the cards in Featured Publications
+  // the cards in Recent Posts
   background: rgb(40, 42, 54);
   box-shadow: 0 1px 4px rgba(0,0,0,.04);
   border: 1px solid rgb(68, 71, 90);
@@ -365,7 +369,7 @@ article .article-metadata {
  * Section 7: Publications (from ref 3, _content.scss)
  *****************************************************/
 
- .li-cite-author {
+.li-cite-author {
   // on the home page
   font-size: 1em;
   color: inherit;
@@ -406,7 +410,7 @@ article .article-metadata {
  *  Section 9: Sharing buttons on the publication page (from ref 3, _content.scss
  ********************************************************************************/
 
- .share-box {
+.share-box {
   float: right;
 }
 
@@ -487,7 +491,7 @@ ul.share li:hover i {
 
 .section-heading p {
   font-weight: 400;
-  font-size: 1.1rem; // subtitle (e.g. "See Research Projects for more details")
+  font-size: 1.1rem; // subtitle (e.g. "See Research Projects for more details" in Research Experience)
   color: #b2b2b2;
 }
 
@@ -495,7 +499,7 @@ ul.share li:hover i {
  *  Section 12: About widget (from ref 3, _widgets.scss)
  *******************************************************/
 
- #profile {
+#profile {
   text-align: center;
   padding: 30px 10px;   // Top padding and left/right paddings
   position: relative;
@@ -573,7 +577,7 @@ ul.ul-edu {
  * Section 13: Experience widget (from ref 3, _widget.scss
  *********************************************************/
 
- .exp-title {
+.exp-title {
   text-transform: none !important;
 }
 
@@ -621,7 +625,7 @@ ul.ul-edu {
   // the settings for the whole container
   display: block;
   position: relative;
-  // margin-top: 0rem;
+  margin-top: -0.5rem;
   overflow: hidden;
 }
 
@@ -653,7 +657,12 @@ ul.ul-edu {
 
 .media.stream-item .stream-meta {
   // top margin of the links from the metatext in Research Projects and Recent Posts
-  margin-top: 12px;
+  margin-top: 0rem;
+}
+
+.media.stream-item .stream-meta {
+  // top margin of the links from the metatext in Research Projects and Recent Posts
+  margin-top: -0.2rem;
 }
 
 .media.stream-item img {
